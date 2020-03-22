@@ -48,23 +48,6 @@ namespace DBFirst
             var result = db.Products.FirstOrDefault(x => x.CategoryID == 1);
             Console.WriteLine(result);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             //Metod
             //var category = db.Categories;
             //***********************************************************************************************************************************
