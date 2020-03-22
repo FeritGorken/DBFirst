@@ -21,63 +21,7 @@ namespace DBFirst
             var result = from cat in db.Categories
                            select cat;
             ConsoleTable.From(result).Write();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
 
 
 
