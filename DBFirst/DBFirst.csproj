@@ -76,6 +76,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NorthwindContext.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>NorthwindContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

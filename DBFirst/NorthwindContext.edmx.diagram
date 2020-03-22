@@ -7,6 +7,8 @@
       <Diagram DiagramId="33bede9249c4408e837f619c9ca75ee4" Name="Diagram1">
         <EntityTypeShape EntityType="NORTHWNDModel.Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NORTHWNDModel.Customer" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NORTHWNDModel.Product" Width="1.5" PointX="3" PointY="5.625" />
+        <AssociationConnector Association="NORTHWNDModel.FK_Products_Categories" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

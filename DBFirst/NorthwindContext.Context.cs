@@ -27,5 +27,6 @@ namespace DBFirst
     
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
     }
 }
