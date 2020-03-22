@@ -91,19 +91,19 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="NorthwindContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>NorthwindContext.Context.cs</LastGenOutput>
       <DependentUpon>NorthwindContext.edmx</DependentUpon>
+      <LastGenOutput>NorthwindContext.Context.cs</LastGenOutput>
     </Content>
     <Content Include="NorthwindContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>NorthwindContext.edmx</DependentUpon>
       <LastGenOutput>NorthwindContext.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
