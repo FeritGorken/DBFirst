@@ -13,6 +13,57 @@ namespace DBFirst
         {
 
             NORTHWNDEntities db = new NORTHWNDEntities();
+            //ilk orderla sonra productname göre orderla
+            //var result = db.Products.OrderBy(x => x.CategoryID).ThenBy(x=>x.ProductName).Select(x => new
+            //{
+            //    Id = x.CategoryID,
+            //    Name = x.ProductName
+            //});
+            //***********************************************************************************************************************************
+            //ilk 5 i bırak sonraki 5 i al bas
+            //var result = db.Products.OrderBy(x => x.CategoryID).Skip(5).Take(5).Select(x => new
+            //{
+            //    Id = x.CategoryID,
+            //    Name = x.ProductName
+            //});            ConsoleTable.From(result).Write();
+            //***********************************************************************************************************************************
+            //bütün dataların price büyükse true doner 1 tane bile düşükse false döner
+            //var result = db.Products.All(x => x.UnitPrice > 0); //true 
+            //var result = db.Products.All(x => x.UnitPrice > 1000); //false 
+            //***********************************************************************************************************************************
+            //herhangi bir kayıt şartı sağlarsa true sağlamazsa false
+            //var result = db.Products.Any(x => x.UnitPrice > 0); //true
+            //var result = db.Products.Any(x => x.UnitPrice > 10000); //false
+            //***********************************************************************************************************************************
+            //category id si 1 olanı getir aynı değere ait 1 den fazla değer varsa hata verir sadece 1 sonuc getirir
+            //var result = db.Products.Single(x => x.CategoryID == 1);
+            //***********************************************************************************************************************************
+            //Birden cok değer varsa hata atar eger hiç yoksa null döner
+            //var result = db.Products.SingleOrDefault(x => x.CategoryID == 1);
+            //***********************************************************************************************************************************
+            //Category id si 1 olanın ilkini getir değer yoksa hata atar 
+            //var result = db.Products.First(x => x.CategoryID == 1);
+            //***********************************************************************************************************************************
+            //Category idsi 1  olanın ilkini getir yoksa hata atma null yaz
+            var result = db.Products.FirstOrDefault(x => x.CategoryID == 1);
+            Console.WriteLine(result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             //Metod
             //var category = db.Categories;
@@ -95,21 +146,16 @@ namespace DBFirst
             //                 NumberOfProduct = g.Count()
             //             };
             //***********************************************************************************************************************************
-            var result = from c in db.Categories
-                         join p in db.Products
-                         on c.CategoryID equals p.CategoryID
-                         group c by c.CategoryName into g
-                         select new
-                         {
-                             g.Key,
-                             NumberOfProducts = g.Count()
-                         };
-
-
-
-
-
-            ConsoleTable.From(result).Write();
+            //var result = from c in db.Categories
+            //             join p in db.Products
+            //             on c.CategoryID equals p.CategoryID
+            //             group c by c.CategoryName into g
+            //             select new
+            //             {
+            //                 g.Key,
+            //                 NumberOfProducts = g.Count()
+            //             };
+            //ConsoleTable.From(result).Write();
 
 
 
